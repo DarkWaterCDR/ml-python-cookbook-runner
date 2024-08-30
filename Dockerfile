@@ -3,7 +3,11 @@ FROM python:3.10
 WORKDIR /workspace
 COPY download_nltk.py .
 
-RUN apt-get update && apt-get install graphviz -y && apt-get clean
+RUN apt-get update && \
+    apt-get install graphviz -y && \
+    apt-get install pandoc -y && \
+    apt-get install texlive-xetex texlive-fonts-recommended texlive-plain-generic -y && \
+    apt-get clean
 
 RUN python -m pip install spacy nltk && \
     python download_nltk.py && \
