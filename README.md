@@ -11,6 +11,12 @@ DOCKER_BUILDKIT=1 docker build -t ml-python-cookbook-runner .
 docker run -it -v $(pwd):/workspace -p 8888:8888 ml-python-cookbook-runner 
 ```
 
+```powershell
+$env:DOCKER_BUILDKIT=1 
+docker build -t ml-python-cookbook-runner .
+docker run -it -v ${pwd}:/workspace -p 8888:8888 ml-python-cookbook-runner 
+```
+
 Go to http://localhost:8888 to open notebooks and run them (you may need the token that's printed out in the terminal).
 
 ## TODOs
