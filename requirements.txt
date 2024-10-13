@@ -1,6 +1,8 @@
+nltk
 notebook
 numpy
 nbconvert
+spacy
 scipy
 scikit-learn
 pandas
